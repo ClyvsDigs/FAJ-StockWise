@@ -1,3 +1,4 @@
+   import BAProcessFlow from '../components/BAProcessFlow'
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   AlertTriangle,
@@ -250,6 +251,13 @@ export default function AnalyticsPage() {
 
       {overview && (
         <>
+           <BAProcessFlow
+     overview={overview}
+     topProducts={topProducts}
+     inventory={inventory}
+     forecast={forecast}
+     recommendations={recommendations}
+   />
           <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             <StatCard
               label="Total revenue"
